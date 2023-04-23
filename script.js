@@ -1,5 +1,9 @@
 const textArea = document.querySelector(".text-area");
-const mensaje = document.querySelector(".mensaje");
+//const mensaje = document.querySelector(".mensaje");
+let mensajeEncriptado = document.getElementById("mensaje-encriptado");
+let titulo = document.getElementById("titulo-mensaje");
+let muñeco = document.getElementById("muñeco");
+let parrafo = document.getElementById("parrafo");
 
 const matrizCodigo = [
     ["e", "enter"],
@@ -12,20 +16,18 @@ const matrizCodigo = [
 function eliminarFondo(){
     const mensaje = document.querySelector(".mensaje");
     textArea.style.backgroundImage = "none";
-    textArea.style.color = "#000";
+    textArea.style.color = "#495057";
     textArea.value = "";
 }
 
 function btnEncriptar(){
     const textoEncriptado = encriptar(textArea.value);
-
     mensaje.value = textoEncriptado;
     textArea.value = "";
 }
 
 function btnDesencriptar(){
     const textoDesencriptado = desencriptar(textArea.value);
-
     mensaje.value = textoDesencriptado;
     textArea.value = "";
 }
@@ -35,6 +37,10 @@ function encriptar(stringEncriptado){
     for(let i=0; i < matrizCodigo.length; i++){
         if(stringEncriptado.includes(matrizCodigo[i][0])){
             stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+            parrafo.textContent = stringEncriptado;
+            titulo.textContent = "";
+            muñeco.src = parrafo;
+
         }
     }
     return stringEncriptado;
