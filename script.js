@@ -39,6 +39,7 @@ function encriptar(stringEncriptado){
             stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
             parrafo.textContent = stringEncriptado;
             titulo.textContent = "";
+            //Quedamos aca.
             muñeco.src = parrafo;
 
         }
