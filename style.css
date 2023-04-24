@@ -12,6 +12,12 @@
     background: #f3f5fc;
 }
 
+.container img{
+    position: absolute;
+    padding-inline-start: 10px;
+    top: 15px;
+}
+
 .text-area {
     position: absolute;
     width: 42%;
