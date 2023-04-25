@@ -114,6 +114,25 @@
     color: #0a3871;
 }
 
+.btnTres{
+    position: relative;
+    right: -150px;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #0a3871;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+    display: none;
+    
+}
+
 .btnUno:hover,
 .btnDos:hover {
     margin: 0.3%;

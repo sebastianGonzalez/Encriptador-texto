@@ -5,6 +5,7 @@ let titulo = document.getElementById("titulo-mensaje");
 let muñeco = document.getElementById("muñeco");
 let parrafo = document.getElementById("parrafo");
 const contenedor = document.querySelector(".container2");
+const botonCopiar = document.querySelector(".btnTres");
 
 const matrizCodigo = [
     ["e", "enter"],
@@ -42,7 +43,6 @@ function encriptar(stringEncriptado){
             titulo.textContent = stringEncriptado;
             //Quedamos aca.
             muñeco.style.display = "none";
-
         }
     }
     return stringEncriptado;
@@ -56,6 +56,7 @@ function desencriptar(stringDesencriptado){
             parrafo.textContent = "";
             titulo.textContent = stringDesencriptado;
             muñeco.style.display = "none";
+            //botonCopiar.style.visibility = "block";
         }
     }
     return stringDesencriptado;
