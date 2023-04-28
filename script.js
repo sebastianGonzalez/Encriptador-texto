@@ -43,6 +43,7 @@ function encriptar(stringEncriptado){
             titulo.textContent = stringEncriptado;
             //Quedamos aca.
             muñeco.style.display = "none";
+            botonCopiar.style.display = "block";
         }
     }
     return stringEncriptado;
@@ -57,6 +58,7 @@ function desencriptar(stringDesencriptado){
             titulo.textContent = stringDesencriptado;
             muñeco.style.display = "none";
             //botonCopiar.style.visibility = "block";
+            botonCopiar.style.display = "block";
         }
     }
     return stringDesencriptado;
@@ -66,4 +68,8 @@ function btnCopiar(){
     const textoCopiado = titulo.textContent;
     navigator.clipboard.writeText(textoCopiado);
     alert("Texto copiado");
+    muñeco.style.display = "block";
+    titulo.textContent = "Ningún mensaje encontrado";
+    parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+    botonCopiar.style.display = "none";
 }
